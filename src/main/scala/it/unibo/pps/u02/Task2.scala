@@ -13,6 +13,18 @@ object Task2 {
 
   def negDef(predicate: String => Boolean): String => Boolean = !predicate(_)
 
+  val p2: (Int, Int, Int) => Boolean = (x, y, z) => x <= y && y == z
+
+  val p1: Int => Int => Int => Boolean = x => y => y match
+    case n if x <= y => y == _
+    case _ => _ => false
+
+  def p3(x: Int, y: Int, z: Int): Boolean = x <= y && y == z
+
+  def p4(x: Int)(y: Int)(z: Int): Boolean = x <= y && y == z
+
+  def compose(f: Int => Int, g: Int => Int): Int => Int = x => f(g(x))
+
   @main def main(): Unit = {
     println(positiveVal(10))
     println(positiveDef(-1))
@@ -21,5 +33,6 @@ object Task2 {
     notEmpty("foo") // true
     notEmpty("") // false
     notEmpty("foo") && !notEmpty("") // true.. a comprehensive test
+    println(compose(_ - 1, _ * 2)(5))
   }
 }
