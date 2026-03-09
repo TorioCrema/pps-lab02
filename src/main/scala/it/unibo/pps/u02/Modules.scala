@@ -8,9 +8,9 @@ object Modules extends App :
     case Teacher(name: String, course: String)
 
   object Person:
-    def name(p: Person): String = p match
-      case Student(n, _) => n
-      case Teacher(n, _) => n
+      def name(p: Person): String = p match
+        case Student(n, _) => n
+        case Teacher(n, _) => n
 
   println(Person.name(Person.Student("mario", 2015)))
 

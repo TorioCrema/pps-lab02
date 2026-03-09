@@ -30,7 +30,7 @@ object DefinedFunctions extends App :
 
   // tail recursion check, as a nested function
   def factorial2(n: Int): Int =
-    @annotation.tailrec // checks only if optimisation is possible
+    @annotation.tailrec // checks only if optimization is possible
     def _fact(n: Int, acc: Int): Int = n match
       case 0 | 1 => acc
       case _ => _fact(n - 1, n * acc)

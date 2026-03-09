@@ -4,7 +4,7 @@ object HigherOrderFunctions extends App:
 
   // non-higher-order, i.e., "first order"
   val f = (x: Int, y: Int) => x + y
-  // higher-order function: some input/ouput is a function itself
+  // higher-order function: some input/output is a function itself
   val h: (Int, Int, (Int, Int) => Int) => Int = (a, b, f) => f(a, b)
 
   println(h(10, 5, _ * _)) // 50
