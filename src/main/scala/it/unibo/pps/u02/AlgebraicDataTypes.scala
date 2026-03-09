@@ -1,7 +1,6 @@
 package it.unibo.pps.u02
 
-object AlgebraicDataTypes extends App :
-
+object AlgebraicDataTypes extends App:
   // introducing a new sum type, defined by enumerating various cases
   enum Person:
     case Student(name: String, year: Int)

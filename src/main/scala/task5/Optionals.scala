@@ -19,8 +19,7 @@ object Optionals:
       case Just(a) => a
       case _       => orElse
 
-
-@main def tryOptionals: Unit =
+@main def tryOptionals(): Unit =
   import Optionals.* // to work with Optionals (to see OptionalInt type)
   import OptionalInt.* // to directly access algorithms
 
@@ -31,4 +30,3 @@ object Optionals:
   println(isEmpty(s1)) // false
   println(orElse(s1, 0)) // 1
   println(orElse(s2, 0)) // 0
-  println(map(s1)(i => i + 1)) // Some("val: 1")
