@@ -29,7 +29,6 @@ object Tasks {
     case (b, 0) => 1
     case (b, e) => b * power(b, e - 1)
 
-
   def powerTail(base: Double, exponent: Int): Double =
     @annotation.tailrec
     def power_(base: Double, exponent: Int, acc: Double): Double = (base, exponent, acc) match
